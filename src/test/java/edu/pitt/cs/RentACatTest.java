@@ -165,7 +165,7 @@ public class RentACatTest {
 		r.addCat(c1);
 		r.addCat(c2);
 		r.addCat(c3);
-		//r.rentCat(2);
+		r.rentCat(2);
 		//boolean availCat = r.catAvailable(2);
 		Mockito.when(c2.getRented()).thenReturn(true);
 		boolean availCat = r.catAvailable(2);
@@ -251,9 +251,15 @@ public class RentACatTest {
 		Mockito.when(c1.toString()).thenReturn(c1Wanted);
 		Mockito.when(c2.toString()).thenReturn(c2Wanted);
 		Mockito.when(c3.toString()).thenReturn(c3Wanted);
+		//Mockito.when(r.listCats()).thenReturn(c1Wanted + c2Wanted + c3Wanted);
 
 
+		/*Mockito.when(c1.toString()).thenReturn("ID " + c2.getId() + ". " + c2.getName());
+		Mockito.when(c2.toString()).thenReturn("ID " + c2.getId() + ". " + c2.getName());
+		Mockito.when(c3.toString()).thenReturn("ID " + c3.getId() + ". " + c1.getName());
+		Mockito.when(r.listCats()).thenReturn(c1.toString()+"\n" + c2.toString() + "\n" + c3.toString()+"\n"); */
 		String list = r.listCats();
+		//assertEquals("The list was wrong.", "ID 1. Jennyanydots\nID 2. Old Deuteronomy\nID 3. Mistoffelees\n", list);
 		assertEquals("The list did not match up.", "ID 1. Jennyanydots\nID 2. Old Deuteronomy\nID 3. Mistoffelees\n", list);
 	}
 
@@ -349,6 +355,10 @@ public class RentACatTest {
 		r.addCat(c3);
 		r.rentCat(2);
 
+		//Cat c4 = Mockito.mock(Cat.class);
+		//Mockito.when(c4.getRented()).thenReturn(true);
+
+		//Mockito.when(c2.returnCat()).thenReturn(true);
 		Mockito.when(r.returnCat(2)).thenReturn(true);
 		r.returnCat(2);
 
