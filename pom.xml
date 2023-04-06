@@ -30,7 +30,7 @@
   <scm>
     <connection>scm:git:git://github.com/wonsunahn/CS1632_CICD_JUnit.git</connection>
     <developerConnection>scm:git:ssh://github.com:wonsunahn/CS1632_CICD_JUnit.git</developerConnection>
-    <url>http://github.com/wonsunahn/CS1632_CICD_JUnit/tree/master</url>
+    <url>https://github.com/CS1632/supplementary-exercise-4-ci-cd-junit-jarab310</url>
    </scm>
 
   <distributionManagement>
